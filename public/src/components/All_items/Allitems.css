@@ -1,0 +1,126 @@
+.movie_top_block {
+    background: #1f2123;
+    height: 40px;
+    padding: 5px 100px;
+}
+
+.movie_top_block p {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.movie_image {
+    height: 200px;
+    width: 150px;
+    opacity: .99;
+    z-index: 1;
+    transition: all 0.2s ease-in;
+}
+
+.item_border_movie .play_image_movie {
+    height: 75px;
+    width: 75px;
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 40px;
+    opacity: 0;
+    z-index: 2;
+    transition: all 0.2s ease-in;
+}
+
+.item_border_movie {
+    outline: 0px solid red;
+    outline-offset: 0px;
+    position: absolute;
+    z-index: 3;
+}
+
+.movie_block:hover .item_border_movie {
+    outline: 5px solid red;
+    outline-offset: -5px;
+}
+
+.movie_block:hover .play_image_movie {
+    opacity: 1;
+}
+
+.movie_block:hover .item_border_movie::before,
+.movie_block:hover .play_image_movie::before,
+.movie_block:hover .movie_image {
+    opacity: .4;
+}
+
+.items_movie {
+    padding: 10px 100px;
+    background: #131415;
+}
+
+.item_movie {
+    width: 150px;
+    height: 280px;
+    border: 0px solid #cccaca;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background: #14181a;
+    color: #cccaca;
+}
+
+.movie_block {
+    height: 200px;
+}
+
+.paginations {
+    background: #131415;
+    padding: 5px 100px;
+}
+
+.paginations .page_wrapper p {
+    background: #1f2123;
+}
+
+.paginations .page_wrapper .page {
+    height: 40px;
+    width: 40px;
+    border: 1px solid #333;
+    font-size: 16px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.page_current {
+    background: #ca563f;
+}
+
+.paginations .buttons {
+    height: 40px;
+    width: 75px;
+    border: 1px solid #333;
+    background: #1f2123;
+    color: white;
+}
+
+.paginations .buttons:disabled {
+    color: #9f9f9f;
+}
+
+.item_movie .link {
+    text-decoration: none;
+    color: #cccaca;
+    transition: all .2s ease-in;
+}
+
+.item_movie .link:hover {
+    text-decoration: underline #ca563f;
+    color: #ca563f;
+}
+
+.allitems {
+    width: 1000px;
+}

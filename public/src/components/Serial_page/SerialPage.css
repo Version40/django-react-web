@@ -1,0 +1,214 @@
+.movie_page {
+    background: #131415;
+    padding: 5px 100px;
+}
+
+.movie_page h6,
+.movie_page h4,
+.movie_page p {
+    padding-left: 10px;
+}
+
+.movie_page h4 {
+    color: white;
+}
+
+.movie_page h6 {
+    color: #9f9f9f;
+    font-size: 12px;
+}
+
+.img_block_page {
+    background: #1f2123;
+    height: 405px;
+    width: 280px;
+}
+
+.movie_poster_page {
+    padding: 10px;
+    width: 280px;
+    height: 405px;
+}
+
+.description_block {
+    background: #1f2123;
+    height: auto;
+    width: 280px;
+    color: white;
+    font-size: 14px;
+    margin-bottom: 100px;
+}
+
+.description_block p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0;
+    color: #9f9f9f;
+}
+
+.description_block span {
+    color: #ca563f;
+}
+
+.description_block .white {
+    color: white;
+}
+
+.description_block .description_block_second {
+    background: #111;
+}
+
+.description_block_movie {
+    margin-top: 60px;
+}
+
+.description_block_movie h5 {
+    color: white;
+}
+
+.description_block_movie p {
+    color: #9f9f9f;
+    padding: 0;
+    text-align: justify;
+}
+
+.player_top {
+    width: 100%;
+    height: 50px;
+    background: #1f2123;
+    margin-top: 30px;
+}
+
+.player_top .first_child p {
+    height: 100%;
+    width: 80px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+}
+
+.player_top .first_child p:first-child {
+    background: #ca563f;
+    width: 160px;
+}
+
+.player_top .first_child p:last-child {
+    font-size: 14px;
+}
+
+
+.video_player {
+    background: #1f2123;
+}
+
+.player_bot {
+    width: 100%;
+    height: 20px;
+    background: #1f2123;
+
+}
+
+.change_nums {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    text-align: center;
+    height: 25px;
+    width: 75px;
+    border: 1px solid #ca563f;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 5px;
+    padding: 0;
+}
+
+.change_nums_current {
+    background: #ca563f;
+}
+
+
+.change_nums p {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 12px;
+}
+
+.change_buttons {
+    width: 150px;
+    height: 30px;
+    border: 1px solid #ca563f;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.change_buttons:first-child {
+    margin-right: 10px;
+}
+
+.change_buttons p {
+    height: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+.serial_season_title {
+    color: white;
+    padding-left: 0;
+    margin: 0;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.serial_season_div {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.serial_season_div .serial_season_button {
+    height: 30px;
+    width: 84px;
+    border: 1px solid #1f2123;
+    color: #9f9f9f;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.serial_season_div .serial_season_button p {
+    padding: 0;
+    margin: 0;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.serial_season_button_current p{
+    color: white;
+    background: #ca563f;
+}

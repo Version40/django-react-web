@@ -1,0 +1,36 @@
+.film_icon {
+    height: 50px;
+    width: 50px;
+}
+
+.footer {
+    height: 120px;
+    background: #1f2123;
+    padding: 10px 100px;
+}
+
+.footer p {
+    color: white;
+}
+
+.footer .block_link .text {
+    color: #c90808;
+    font-style: italic;
+    margin-left: 20px;
+}
+
+.footer .block_link .text:hover {
+    text-decoration: none;
+}
+
+.footer .icon {
+    height: 25px;
+    color: white;
+    margin-left: 10px;
+    transition: all .5s ease-in;
+}
+
+.footer .icon:hover {
+    transform: scale(1.4);
+    color: #c90808;
+}

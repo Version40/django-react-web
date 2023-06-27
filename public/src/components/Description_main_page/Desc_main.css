@@ -1,0 +1,27 @@
+.desc_block {
+    background: black;
+    padding: 5px 100px;
+    border-top: 5px solid #ca563f;
+}
+
+.desc_block p {
+    margin-bottom: 10px;
+    text-align: justify;
+    text-indent: 30px;
+    color: grey;
+    font-size: 12px;
+}
+
+.desc_block h6 {
+    color: #ca563f;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.desc_block h6:first-child{
+    padding-top: 30px;
+}
+
+.desc_block p:last-child {
+    padding-bottom: 30px;
+}
