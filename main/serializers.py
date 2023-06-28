@@ -47,8 +47,19 @@ class OneMovieSerializer(serializers.HyperlinkedModelSerializer):
         }
 
 
+# class OneSerialSerializer(serializers.HyperlinkedModelSerializer):
+#     video = SerialSeasonSerializer(many=True)
+#
+#     class Meta:
+#         model = Serials
+#         fields = '__all__'
+#         lookup_field = 'slug'
+#         extra_kwargs = {
+#             'url': {'lookup_field': 'slug'}
+#         }
+#
 class OneSerialSerializer(serializers.HyperlinkedModelSerializer):
-    video = SerialSeasonSerializer(many=True)
+    video = serializers.SerializerMethodField()
 
     class Meta:
         model = Serials
@@ -57,6 +68,11 @@ class OneSerialSerializer(serializers.HyperlinkedModelSerializer):
         extra_kwargs = {
             'url': {'lookup_field': 'slug'}
         }
+
+    def get_video(self, instance):
+        videos = instance.video.all().order_by('id')
+        return SerialSeasonSerializer(videos, many=True).data
+
 
 
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):

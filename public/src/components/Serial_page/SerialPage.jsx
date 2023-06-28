@@ -3,7 +3,7 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import axios from "axios";
 import Items from "./Items";
-import * as url from "url";
+
 
 
 const FilmPage = () => {
@@ -18,7 +18,7 @@ const FilmPage = () => {
     const changeSeason = (e) => {
         setSeasonNumber({index : e.currentTarget.innerText.split("Сезон")[1] - 1})
     }
-
+    console.log(season)
 
     useEffect(() => {
         axios.get('http://127.0.0.1:8000/api/serial/' + id + '/?format=json')

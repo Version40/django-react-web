@@ -45,7 +45,7 @@ class SomeFilmPage(viewsets.ModelViewSet):
     lookup_field = 'slug'
 
 class SomeSerialSeasonPage(viewsets.ModelViewSet):
-    queryset = SerialSeason.objects.all()
+    queryset = SerialSeason.objects.all().order_by('-id')
     serializer_class = SerialSeasonSerializer
     lookup_field = 'slug'
 
