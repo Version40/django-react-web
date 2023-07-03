@@ -10,9 +10,8 @@ const Pagination = ({ itemsPerPage, totalItems, paginate, prevPage, nextPage, cu
     }
 
     return (
-        <div className="paginations pb-4 d-flex flex-row">
-            <div className="col-2"></div>
-            <div className="col-8 d-flex justify-content-center align-items-center">
+        <div className="paginations pb-4 d-flex flex-row justify-content-center align-items-center">
+            <div className="d-flex justify-content-center align-items-center">
                 <div className="page_wrapper d-flex">
                     <button className="buttons" onClick={prevPage} disabled={currentPage <= 1 ? true : false}>Назад</button>
                     {
@@ -27,7 +26,6 @@ const Pagination = ({ itemsPerPage, totalItems, paginate, prevPage, nextPage, cu
                     <button className="buttons" onClick={nextPage} disabled={currentPage + 1 > Math.ceil(totalItems / itemsPerPage) ? true : false}>Далі</button>
                 </div>
             </div>
-            <div className="col-2"></div>
         </div>
     );
 };

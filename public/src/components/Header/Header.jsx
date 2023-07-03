@@ -6,11 +6,14 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import './Header.css'
 import {Link} from "react-router-dom";
 import Login from "./Login";
+import Search from "./Search";
 
 const Header = () => {
 
     const [open, setOpen] = useState(false)
     const [visible, setVisible] = useState(false)
+
+    const [searchValue, setSearchValue] = useState('')
 
     return (
         <div>
@@ -31,7 +34,7 @@ const Header = () => {
                         <a href="#">ТОП 100</a>
                     </div>
                     <div className="right_block col-2 me-5 d-flex align-items-center justify-content-start">
-                        <p className="right_block_find me-3 ms-3 mb-0" onClick={() => {setOpen(!open)}}><FontAwesomeIcon className="me-3 icon_find" icon={faMagnifyingGlass} style={{color: "#ffffff",}} /></p>
+                        <p className="right_block_find me-3 ms-3 mb-0" onClick={() => {setOpen(!open)}}><FontAwesomeIcon className={open ? "me-3 icon_find_active" : "me-3 icon_find"} icon={faMagnifyingGlass} style={{color: "#ffffff",}} /></p>
                         <div className="block">
                             <a className="d-flex align-items-center flex-row" href="#" onClick={() => {setVisible(!visible)}}><FontAwesomeIcon className="icon_user me-2" icon={faUser} style={{color: "#ffffff",}} /><p>Авторизація</p></a>
                         </div>
@@ -41,8 +44,7 @@ const Header = () => {
             <div className="fake_footer"></div>
             <div className={`dropdown_menu ${open? "active" : "inactive"}`}>
                 <div className="dropdown_menu_div">
-                    <input type="text" placeholder="Введіть слово для пошуку..."/>
-                    <button >Знайти</button>
+                    <Search searchValue={searchValue} setSearchValue={setSearchValue}></Search>
                 </div>
             </div>
             <div className={`dropdown_auth ${visible? "active_div" : "inactive_div"}`}>

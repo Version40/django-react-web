@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import Items from "./Items";
 import Pagination from "./Pagination";
+import News from "./News/News";
 
 
 const AllItems = () => {
@@ -32,11 +33,19 @@ const AllItems = () => {
 
     return (
         <div>
-            <div className="movie_top_block">
-                <p className="ps-5">Останні надходження</p>
+            <div className="movie_top_block d-flex">
+                <p className="ps-5 col-8 align-content-center">Останні надходження</p>
+                <p className="col-4">Новини</p>
             </div>
-            <Items items={currentItem} loading={loading}></Items>
-            <Pagination currentPage={currentPage} nextPage={nextPage} prevPage={prevPage} paginate={paginate} itemsPerPage={itemsPerPage} totalItems={items.length}></Pagination>
+            <div className="movie_bottom_block d-flex">
+                <div className="col-8">
+                    <Items items={currentItem} loading={loading}></Items>
+                    <Pagination currentPage={currentPage} nextPage={nextPage} prevPage={prevPage} paginate={paginate} itemsPerPage={itemsPerPage} totalItems={items.length}></Pagination>
+                </div>
+                <div className="movie_right_block col-4">
+                    <News></News>
+                </div>
+            </div>
         </div>
     );
 };

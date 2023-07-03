@@ -47,11 +47,10 @@ class Films(models.Model):
     def __str__(self):
         return self.title
 
+class News(models.Model):
+    slug = models.SlugField('Унікальна назва', unique=True)
+    title = models.CharField('Назва новини', max_length=100)
+    image = models.CharField('Банер новини', max_length=50)
 
-
-
-
-
-
-
-
+    def __str__(self):
+        return self.title

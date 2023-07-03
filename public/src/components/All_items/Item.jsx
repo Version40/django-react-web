@@ -3,6 +3,7 @@ import './Allitems.css'
 import {Link} from "react-router-dom";
 
 const Item = (props) => {
+
     return (
         <div className="item_movie mb-5 me-3 ms-3">
             <div className='movie_block'>

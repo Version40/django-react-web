@@ -159,10 +159,11 @@ const MyCarousel = (props) => {
     return (
         <div className="carousel-container">
             <div className="carousel-wrapper">
-                {
-                    (isRepeating || currentIndex > 0) &&
-                    <FontAwesomeIcon className="left-arrow" onClick={prev} icon={faChevronLeft} />
-                }
+                <FontAwesomeIcon className="left-arrow" onClick={prev} icon={faChevronLeft} />
+                {/*{*/}
+                {/*    (isRepeating || currentIndex > 0) &&*/}
+                {/*    <FontAwesomeIcon className="left-arrow" onClick={prev} icon={faChevronLeft} />*/}
+                {/*}*/}
                 <div
                     className="carousel-content-wrapper"
                     onTouchStart={handleTouchStart}
@@ -187,10 +188,11 @@ const MyCarousel = (props) => {
                         }
                     </div>
                 </div>
-                {
-                    (isRepeating || currentIndex < (length - show)) &&
-                    <FontAwesomeIcon className="right-arrow" onClick={next} icon={faChevronRight} />
-                }
+                <FontAwesomeIcon className="right-arrow" onClick={next} icon={faChevronRight} />
+                {/*{*/}
+                {/*    (isRepeating || currentIndex < (length - show)) &&*/}
+                {/*    <FontAwesomeIcon className="right-arrow" onClick={next} icon={faChevronRight} />*/}
+                {/*}*/}
             </div>
         </div>
     )

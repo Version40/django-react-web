@@ -80,6 +80,15 @@
     color: #5c5c5c;
     font-size: 40px;
     cursor: pointer;
+    transition: all .7s ease;
+}
+
+.left-arrow:hover {
+    color: #c90808;
+}
+
+.right-arrow:hover {
+    color: #c90808;
 }
 
 .left-arrow {

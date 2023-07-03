@@ -11,9 +11,9 @@ from rest_framework.views import APIView
 from rest_framework_simplejwt.views import TokenObtainPairView
 
 from .serializers import SerialsSerializer, FilmsSerializer, AllMovieSerializer, OneMovieSerializer, OneSerialSerializer, SerialSeasonSerializer
-from .serializers import MyTokenObtainPairSerializer, RegisterSerializer
+from .serializers import MyTokenObtainPairSerializer, RegisterSerializer, NewsSerializer
 from rest_framework.viewsets import ModelViewSet
-from .models import Serials, Films, SerialSeason
+from .models import Serials, Films, SerialSeason, News
 
 
 class SerialsPage(viewsets.ModelViewSet):
@@ -58,6 +58,11 @@ class SomeSerialPage(viewsets.ModelViewSet):
         video = SerialSeason.objects.all()
         data = OneSerialSerializer(video, many=True).data
         return HttpResponse(data)
+
+class NewsPage(viewsets.ModelViewSet):
+    queryset = News.objects.all()
+    serializer_class = NewsSerializer
+    lookup_field = 'slug'
 
 
 

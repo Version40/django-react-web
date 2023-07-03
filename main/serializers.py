@@ -1,6 +1,6 @@
 from rest_framework.serializers import ModelSerializer
 from rest_framework import serializers
-from .models import Serials, Films, SerialSeason
+from .models import Serials, Films, SerialSeason, News
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from django.contrib.auth.models import User
 from django.contrib.auth.password_validation import validate_password
@@ -73,7 +73,14 @@ class OneSerialSerializer(serializers.HyperlinkedModelSerializer):
         videos = instance.video.all().order_by('id')
         return SerialSeasonSerializer(videos, many=True).data
 
-
+class NewsSerializer(ModelSerializer):
+    class Meta:
+        model = News
+        fields = '__all__'
+        lookup_field = 'slug'
+        extra_kwargs = {
+            'url': {'lookup_field': 'slug'},
+        }
 
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
     @classmethod
